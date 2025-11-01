@@ -1,0 +1,12 @@
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\bin\Debug\CadParcial2Jrar.dll.config
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\bin\Debug\CadParcial2Jrar.dll
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\bin\Debug\CadParcial2Jrar.pdb
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\bin\Debug\EntityFramework.dll
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\bin\Debug\EntityFramework.xml
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\obj\Debug\CadParcial2Jrar.csproj.AssemblyReference.cache
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\obj\Debug\CadParcial2Jrar.csproj.CoreCompileInputs.cache
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\obj\Debug\CadParci.F0D0F1CB.Up2Date
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\obj\Debug\CadParcial2Jrar.dll
+C:\Users\Javier\Desktop\Parcial2Jrar\Parcial2Jrar\CadParcial2Jrar\obj\Debug\CadParcial2Jrar.pdb
