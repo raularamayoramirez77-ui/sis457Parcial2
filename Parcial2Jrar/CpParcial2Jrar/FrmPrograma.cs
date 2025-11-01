@@ -32,6 +32,7 @@ namespace CpParcial2Jrar
             dgvLista.Columns["fechaEstreno"].HeaderText = "Fecha de Estreno";
             dgvLista.Columns["canal"].HeaderText = "Canal";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario de Registro";
+            dgvLista.Columns["Clasificacion"].HeaderText = "Fecha de Registro";
 
             if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["titulo"];
             btnEditar.Enabled = lista.Count > 0;
@@ -214,7 +215,9 @@ namespace CpParcial2Jrar
                 erpfechaEstreno.SetError(dtpfechaEstreno, "La fecha de estreno no puede ser futura.");
                 esValido = false;
             }
+
             return esValido;
         }
+
     }
 }

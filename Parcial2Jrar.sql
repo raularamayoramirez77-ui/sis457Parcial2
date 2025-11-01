@@ -18,6 +18,7 @@ GO
 
 
 -- Eliminar si existen
+DROP PROC IF EXISTS paInsertarPrograma;
 DROP PROC IF EXISTS paListarProgramas;
 DROP PROC IF EXISTS paListarCanales;
 DROP TABLE IF EXISTS Programa;
@@ -46,15 +47,15 @@ CREATE TABLE Programa (
 	fechaEstreno DATE NULL,
 	usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
 	fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+	clasificacion VARCHAR(15) NULL,
 	estado SMALLINT NOT NULL DEFAULT 1, -- -1: Eliminado, 0: Inactivo, 1: Activo
 	FOREIGN KEY (idCanal) REFERENCES Canal(id)
 );
 GO
 
 
--- ?? Listar Canales
+-- Procedimiento: Listar Canales
 
-GO
 CREATE PROC paListarCanales @parametro VARCHAR(50)
 AS
 BEGIN
@@ -74,9 +75,9 @@ END;
 GO
 
 
--- ?? Listar Programas
 
-GO
+-- Procedimiento: Listar Programas
+
 CREATE PROC paListarProgramas @parametro VARCHAR(50)
 AS
 BEGIN
@@ -89,20 +90,42 @@ BEGIN
 		p.productor,
 		p.fechaEstreno,
 		c.nombre AS Canal,
+		p.clasificacion,
 		p.usuarioRegistro,
 		p.fechaRegistro,
 		p.estado
 	FROM Programa p
 	INNER JOIN Canal c ON p.idCanal = c.id
 	WHERE p.estado > -1
-	  AND (p.titulo + ISNULL(p.descripcion, '') + ISNULL(p.productor, '') + c.nombre)
+	  AND (p.titulo + ISNULL(p.descripcion, '') + ISNULL(p.productor, '') + c.nombre + ISNULL(p.clasificacion, ''))
 		  LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
 	ORDER BY p.estado DESC, p.titulo ASC;
 END;
 GO
 
 
+-- Procedimiento: Insertar Programa
+
+CREATE PROC paInsertarPrograma
+	@idCanal INT,
+	@titulo VARCHAR(100),
+	@descripcion VARCHAR(250),
+	@duracion INT,
+	@productor VARCHAR(100),
+	@fechaEstreno DATE,
+	@clasificacion VARCHAR(15)
+AS
+BEGIN
+	SET NOCOUNT ON;
+	INSERT INTO Programa (idCanal, titulo, descripcion, duracion, productor, fechaEstreno, clasificacion)
+	VALUES (@idCanal, @titulo, @descripcion, @duracion, @productor, @fechaEstreno, @clasificacion);
+END;
+GO
+
+
+
 -- Insertar canales
+
 INSERT INTO Canal (nombre, frecuencia)
 VALUES 
 ('Canal Andino', '92.3 FM'),
@@ -110,19 +133,35 @@ VALUES
 ('Canal Horizonte', '99.9 FM');
 GO
 
+
 -- Insertar programas
-INSERT INTO Programa (idCanal, titulo, descripcion, duracion, productor, fechaEstreno)
+
+INSERT INTO Programa (idCanal, titulo, descripcion, duracion, productor, fechaEstreno, clasificacion)
 VALUES
-(1, 'Actualidad Andina', 'Programa de análisis y noticias de la región andina.', 60, 'María Gutiérrez', '2023-05-15'),
-(2, 'Pasión Deportiva', 'Cobertura completa de eventos deportivos nacionales e internacionales.', 45, 'Luis Mendoza', '2023-04-25'),
-(3, 'Sonidos del Horizonte', 'Espacio musical con bandas emergentes y entrevistas a artistas.', 90, 'Claudia Rojas', '2023-08-05');
+(1, 'Actualidad Andina', 'Programa de análisis y noticias de la región andina.', 60, 'María Gutiérrez', '2023-05-15', '13T'),
+(2, 'Pasión Deportiva', 'Cobertura completa de eventos deportivos nacionales e internacionales.', 45, 'Luis Mendoza', '2023-04-25', '16T'),
+(3, 'Sonidos del Horizonte', 'Espacio musical con bandas emergentes y entrevistas a artistas.', 90, 'Claudia Rojas', '2023-08-05', '18T');
 GO
 
 
--- Listar canales
+
+-- Ejemplos de uso
+
 EXEC paListarCanales '';
 GO
 
--- Listar programas
+EXEC paListarProgramas '';
+GO
+
+EXEC paInsertarPrograma 
+	@idCanal = 1,
+	@titulo = 'Andes en Vivo',
+	@descripcion = 'Cobertura de eventos culturales y tradiciones andinas.',
+	@duracion = 50,
+	@productor = 'Carlos Pérez',
+	@fechaEstreno = '2023-09-01',
+	@clasificacion = '13T';
+GO
+
 EXEC paListarProgramas '';
 GO

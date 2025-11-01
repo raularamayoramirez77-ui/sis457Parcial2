@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EF733D3A-A1C9-4B54-833B-93F6433092ED}|CpParcial2Jrar\\CpParcial2Jrar.csproj|C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\cpparcial2jrar\\frmprograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EF733D3A-A1C9-4B54-833B-93F6433092ED}|CpParcial2Jrar\\CpParcial2Jrar.csproj|solutionrelative:cpparcial2jrar\\frmprograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF733D3A-A1C9-4B54-833B-93F6433092ED}|CpParcial2Jrar\\CpParcial2Jrar.csproj|c:\\users\\javier\\desktop\\parcial2jrar\\parcial2jrar\\cpparcial2jrar\\frmprograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EF733D3A-A1C9-4B54-833B-93F6433092ED}|CpParcial2Jrar\\CpParcial2Jrar.csproj|solutionrelative:cpparcial2jrar\\frmprograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EF733D3A-A1C9-4B54-833B-93F6433092ED}|CpParcial2Jrar\\CpParcial2Jrar.csproj|C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\cpparcial2jrar\\frmprograma.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF733D3A-A1C9-4B54-833B-93F6433092ED}|CpParcial2Jrar\\CpParcial2Jrar.csproj|solutionrelative:cpparcial2jrar\\frmprograma.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A84DF2-50C0-4C22-832D-F01FF3E5685A}|ClnParcial2Jrar\\ClnParcial2Jrar.csproj|C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\clnparcial2jrar\\programacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35A84DF2-50C0-4C22-832D-F01FF3E5685A}|ClnParcial2Jrar\\ClnParcial2Jrar.csproj|solutionrelative:clnparcial2jrar\\programacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF733D3A-A1C9-4B54-833B-93F6433092ED}|CpParcial2Jrar\\CpParcial2Jrar.csproj|C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\cpparcial2jrar\\frmprograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF733D3A-A1C9-4B54-833B-93F6433092ED}|CpParcial2Jrar\\CpParcial2Jrar.csproj|solutionrelative:cpparcial2jrar\\frmprograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
@@ -20,11 +32,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ProgramaCln.cs",
+              "DocumentMoniker": "C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\ClnParcial2Jrar\\ProgramaCln.cs",
+              "RelativeDocumentMoniker": "ClnParcial2Jrar\\ProgramaCln.cs",
+              "ToolTip": "C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\ClnParcial2Jrar\\ProgramaCln.cs",
+              "RelativeToolTip": "ClnParcial2Jrar\\ProgramaCln.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAewD8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T14:14:42.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmPrograma.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\CpParcial2Jrar\\FrmPrograma.Designer.cs",
+              "RelativeDocumentMoniker": "CpParcial2Jrar\\FrmPrograma.Designer.cs",
+              "ToolTip": "C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\CpParcial2Jrar\\FrmPrograma.Designer.cs",
+              "RelativeToolTip": "CpParcial2Jrar\\FrmPrograma.Designer.cs",
+              "ViewState": "AgIAAIMBAAAAAAAAAAAowMQBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T13:35:36.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmPrograma.cs",
+              "DocumentMoniker": "C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\CpParcial2Jrar\\FrmPrograma.cs",
+              "RelativeDocumentMoniker": "CpParcial2Jrar\\FrmPrograma.cs",
+              "ToolTip": "C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\CpParcial2Jrar\\FrmPrograma.cs",
+              "RelativeToolTip": "CpParcial2Jrar\\FrmPrograma.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T13:35:23.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Parcial2Jrar.sql ",
               "DocumentMoniker": "C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar.sql",
               "RelativeDocumentMoniker": "..\\Parcial2Jrar.sql",
@@ -35,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FrmPrograma.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Javier\\Desktop\\Parcial2Jrar\\Parcial2Jrar\\CpParcial2Jrar\\FrmPrograma.cs",
               "RelativeDocumentMoniker": "CpParcial2Jrar\\FrmPrograma.cs",

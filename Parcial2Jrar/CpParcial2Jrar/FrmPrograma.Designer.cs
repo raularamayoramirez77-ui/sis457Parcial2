@@ -62,6 +62,9 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.erpCanal = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblClasificacion = new System.Windows.Forms.Label();
+            this.cbxClasificacion = new System.Windows.Forms.ComboBox();
+            this.errorClasificacion = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.erpTitulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDuracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).BeginInit();
@@ -73,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.pnlAcciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpCanal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorClasificacion)).BeginInit();
             this.SuspendLayout();
             // 
             // erpTitulo
@@ -97,6 +101,8 @@
             // 
             // gbxDatos
             // 
+            this.gbxDatos.Controls.Add(this.cbxClasificacion);
+            this.gbxDatos.Controls.Add(this.lblClasificacion);
             this.gbxDatos.Controls.Add(this.cbxCanal);
             this.gbxDatos.Controls.Add(this.dtpfechaEstreno);
             this.gbxDatos.Controls.Add(this.txtProductor);
@@ -112,9 +118,9 @@
             this.gbxDatos.Controls.Add(this.lblDescripcion);
             this.gbxDatos.Controls.Add(this.lblTitulo);
             this.gbxDatos.Location = new System.Drawing.Point(5, 276);
-            this.gbxDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxDatos.Margin = new System.Windows.Forms.Padding(2);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxDatos.Padding = new System.Windows.Forms.Padding(2);
             this.gbxDatos.Size = new System.Drawing.Size(592, 147);
             this.gbxDatos.TabIndex = 13;
             this.gbxDatos.TabStop = false;
@@ -124,7 +130,7 @@
             // 
             this.cbxCanal.FormattingEnabled = true;
             this.cbxCanal.Location = new System.Drawing.Point(405, 41);
-            this.cbxCanal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxCanal.Margin = new System.Windows.Forms.Padding(2);
             this.cbxCanal.Name = "cbxCanal";
             this.cbxCanal.Size = new System.Drawing.Size(151, 21);
             this.cbxCanal.TabIndex = 15;
@@ -132,7 +138,7 @@
             // dtpfechaEstreno
             // 
             this.dtpfechaEstreno.Location = new System.Drawing.Point(405, 15);
-            this.dtpfechaEstreno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpfechaEstreno.Margin = new System.Windows.Forms.Padding(2);
             this.dtpfechaEstreno.Name = "dtpfechaEstreno";
             this.dtpfechaEstreno.Size = new System.Drawing.Size(151, 20);
             this.dtpfechaEstreno.TabIndex = 14;
@@ -141,7 +147,7 @@
             // 
             this.txtProductor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductor.Location = new System.Drawing.Point(108, 104);
-            this.txtProductor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductor.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductor.MaxLength = 20;
             this.txtProductor.Name = "txtProductor";
             this.txtProductor.Size = new System.Drawing.Size(148, 20);
@@ -160,7 +166,7 @@
             // nudDuracion
             // 
             this.nudDuracion.Location = new System.Drawing.Point(108, 75);
-            this.nudDuracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudDuracion.Margin = new System.Windows.Forms.Padding(2);
             this.nudDuracion.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -174,8 +180,8 @@
             // 
             this.btnCancelar.Image = global::CpParcial2Jrar.Properties.Resources.cancel;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(472, 76);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Location = new System.Drawing.Point(463, 104);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 32);
             this.btnCancelar.TabIndex = 10;
@@ -188,8 +194,8 @@
             // 
             this.btnGuardar.Image = global::CpParcial2Jrar.Properties.Resources.save;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(359, 76);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(360, 104);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(76, 32);
             this.btnGuardar.TabIndex = 7;
@@ -221,7 +227,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(108, 36);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.MaxLength = 200;
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -232,7 +238,7 @@
             // 
             this.txtTitulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTitulo.Location = new System.Drawing.Point(108, 14);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitulo.MaxLength = 20;
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(148, 20);
@@ -272,9 +278,9 @@
             // 
             this.gbxListado.Controls.Add(this.dgvLista);
             this.gbxListado.Location = new System.Drawing.Point(5, 84);
-            this.gbxListado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxListado.Margin = new System.Windows.Forms.Padding(2);
             this.gbxListado.Name = "gbxListado";
-            this.gbxListado.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxListado.Padding = new System.Windows.Forms.Padding(2);
             this.gbxListado.Size = new System.Drawing.Size(592, 144);
             this.gbxListado.TabIndex = 11;
             this.gbxListado.TabStop = false;
@@ -287,7 +293,7 @@
             this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLista.Location = new System.Drawing.Point(7, 17);
-            this.dgvLista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLista.MultiSelect = false;
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
@@ -299,7 +305,7 @@
             // txtParametro
             // 
             this.txtParametro.Location = new System.Drawing.Point(278, 55);
-            this.txtParametro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtParametro.Margin = new System.Windows.Forms.Padding(2);
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(201, 20);
             this.txtParametro.TabIndex = 9;
@@ -335,7 +341,7 @@
             this.pnlAcciones.Controls.Add(this.btnEditar);
             this.pnlAcciones.Controls.Add(this.btnNuevo);
             this.pnlAcciones.Location = new System.Drawing.Point(5, 232);
-            this.pnlAcciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAcciones.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAcciones.Name = "pnlAcciones";
             this.pnlAcciones.Size = new System.Drawing.Size(589, 40);
             this.pnlAcciones.TabIndex = 12;
@@ -345,7 +351,7 @@
             this.btnCerrar.Image = global::CpParcial2Jrar.Properties.Resources.close;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.Location = new System.Drawing.Point(426, 3);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(70, 32);
             this.btnCerrar.TabIndex = 9;
@@ -359,7 +365,7 @@
             this.btnEliminar.Image = global::CpParcial2Jrar.Properties.Resources.delete;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(304, 2);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(74, 32);
             this.btnEliminar.TabIndex = 8;
@@ -373,7 +379,7 @@
             this.btnEditar.Image = global::CpParcial2Jrar.Properties.Resources.edit;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.Location = new System.Drawing.Point(186, 2);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(69, 32);
             this.btnEditar.TabIndex = 7;
@@ -387,7 +393,7 @@
             this.btnNuevo.Image = global::CpParcial2Jrar.Properties.Resources._new;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(73, 2);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(69, 32);
             this.btnNuevo.TabIndex = 6;
@@ -401,7 +407,7 @@
             this.btnBuscar.Image = global::CpParcial2Jrar.Properties.Resources.search;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(519, 48);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(69, 32);
             this.btnBuscar.TabIndex = 10;
@@ -413,6 +419,33 @@
             // erpCanal
             // 
             this.erpCanal.ContainerControl = this;
+            // 
+            // lblClasificacion
+            // 
+            this.lblClasificacion.AutoSize = true;
+            this.lblClasificacion.Location = new System.Drawing.Point(326, 77);
+            this.lblClasificacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblClasificacion.Name = "lblClasificacion";
+            this.lblClasificacion.Size = new System.Drawing.Size(69, 13);
+            this.lblClasificacion.TabIndex = 16;
+            this.lblClasificacion.Text = "Clasificacion:";
+            // 
+            // cbxClasificacion
+            // 
+            this.cbxClasificacion.FormattingEnabled = true;
+            this.cbxClasificacion.Items.AddRange(new object[] {
+            "13T",
+            "16T",
+            "18T"});
+            this.cbxClasificacion.Location = new System.Drawing.Point(405, 73);
+            this.cbxClasificacion.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxClasificacion.Name = "cbxClasificacion";
+            this.cbxClasificacion.Size = new System.Drawing.Size(151, 21);
+            this.cbxClasificacion.TabIndex = 17;
+            // 
+            // errorClasificacion
+            // 
+            this.errorClasificacion.ContainerControl = this;
             // 
             // FrmPrograma
             // 
@@ -428,7 +461,7 @@
             this.Controls.Add(this.lblPrograma);
             this.Controls.Add(this.pnlAcciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPrograma";
             this.Text = "::: Programa ::: ";
             this.Load += new System.EventHandler(this.FrmPrograma_Load);
@@ -445,6 +478,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.pnlAcciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.erpCanal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorClasificacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,5 +518,8 @@
         private System.Windows.Forms.DateTimePicker dtpfechaEstreno;
         private System.Windows.Forms.ComboBox cbxCanal;
         private System.Windows.Forms.ErrorProvider erpCanal;
+        private System.Windows.Forms.ComboBox cbxClasificacion;
+        private System.Windows.Forms.Label lblClasificacion;
+        private System.Windows.Forms.ErrorProvider errorClasificacion;
     }
 }
